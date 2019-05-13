@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd ../DotNet/CIKataBackEnd/
+cd ./DotNet/CIKataBackEnd/
 dotnet build
 dotnet test
