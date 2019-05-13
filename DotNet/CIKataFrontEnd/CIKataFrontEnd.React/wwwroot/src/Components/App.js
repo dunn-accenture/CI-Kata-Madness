@@ -7,7 +7,7 @@ export default class App extends Component{
     }
 
     getInfo() {
-        fetch('url/to/api/project/endpoint')
+        fetch('http://localhost:8080/api/values')
             .then(response => response.json())
             .then(data => {
                 this.setState({result: data})})
