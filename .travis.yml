@@ -8,3 +8,6 @@ script:
   - npm install
   - npm run wbp
   - npm test
+  - cd ../../CIKataBackEnd/
+  - dotnet build
+  - dotnet test
