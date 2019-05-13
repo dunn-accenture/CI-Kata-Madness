@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd ../DotNet/CIKataBackEnd/
+dotnet build
+dotnet test
