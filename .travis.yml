@@ -10,7 +10,7 @@ script:
   - ./frontEndBuildTest
   - ./backEndContainer
   - ./frontEndContainer
-  - cd ..
+  - cd .. 
   - docker-compose up -d
   - cd ../DotNet/CIKataFrontEnd/CIKataFrontEnd.IntegrationTests/
   - dotnet test
