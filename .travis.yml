@@ -4,10 +4,8 @@ sudo: required
 dist: xenial
 dotnet: 2.2
 script:
-  - cd ./DotNet/CIKataFrontEnd/CIKataFrontEnd.React/
-  - npm install
-  - npm run wbp
-  - npm test
-  - cd ../../CIKataBackEnd/
-  - dotnet build
-  - dotnet test
+  - cd ./scripts/
+  - ./backEndContainer
+  - ./backEndBuildTest
+  - ./frontEndContainer
+  - ./frontEndBuildTest
