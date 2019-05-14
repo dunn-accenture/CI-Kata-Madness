@@ -2,4 +2,4 @@
 
 cd ../DotNet/CIKataFrontEnd/
 docker build -t frontendimage .
-docker run -p 5000:80 --name frontend frontendimage
+#docker run -p 5000:80 --name frontend frontendimage
