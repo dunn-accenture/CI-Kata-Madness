@@ -4,6 +4,3 @@ cd ../DotNet/CIKataFrontEnd/CIKataFrontEnd.React/
 npm install
 npm run wbp
 npm test
-
-cd ../CIKataFrontEnd.IntegrationTests/
-dotnet test

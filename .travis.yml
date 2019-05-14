@@ -4,9 +4,13 @@ sudo: required
 dist: xenial
 dotnet: 2.2
 script:
-  - docker-compose up -d
+
   - cd ./scripts/
   - ./backEndBuildTest
   - ./frontEndBuildTest
+  - cd ..
+  - docker-compose up -d
+  - cd ../CIKataFrontEnd.IntegrationTests/
+  - dotnet test
   - cd ..
   - docker-compose down
