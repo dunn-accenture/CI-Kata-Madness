@@ -1,8 +1,8 @@
 version: '3'
 services:
-  frontend: JakeTheGingScheuer/ci-kata-madness:frontendimage
+  frontend: JakeTheGingScheuer/ci-kata-madness:frontend
   ports:
     - "5000:80"
-  backend: JakeTheGingScheuer/ci-kata-madness:backendimage
+  backend: JakeTheGingScheuer/ci-kata-madness:backend
   ports:
     - "8080:80"
