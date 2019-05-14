@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using CIKataBackEnd.WebApi.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CIKataBackEnd.WebApi.Controllers
@@ -7,28 +8,18 @@ namespace CIKataBackEnd.WebApi.Controllers
     [ApiController]
     public class ValuesController : Controller
     {
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return new string[] {"value1", "value2"};
-        }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public JsonResult Get(int id)
+        // GET api/values/
+        [HttpGet]
+        public JsonResult Get()
         {
             HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "*");
 
             var returnString = string.Empty;
 
-            if (id > 5)
-            {
-                returnString = "biggun";
-            }
-            else
-            {
-                returnString = "wee one";
-            }
+            BusinessLogicService bls = new BusinessLogicService();
+
+            returnString = bls.MakeUpValue();
 
             return new JsonResult(returnString);
         }
