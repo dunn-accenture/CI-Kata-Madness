@@ -4,10 +4,15 @@ sudo: required
 dist: xenial
 dotnet: 2.2
 script:
-  - cd ./DotNet/CIKataFrontEnd/CIKataFrontEnd.React/
-  - npm install
-  - npm run wbp
-  - npm test
-  - cd ../../CIKataBackEnd/
-  - dotnet build
+
+  - cd ./scripts/
+  - ./backEndBuildTest
+  - ./frontEndBuildTest
+  - ./backEndContainer
+  - ./frontEndContainer
+  - cd ..
+  - docker-compose up -d
+  - cd ../DotNet/CIKataFrontEnd/CIKataFrontEnd.IntegrationTests/
   - dotnet test
+  - cd ..
+  - docker-compose down

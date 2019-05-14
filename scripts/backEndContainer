@@ -2,4 +2,4 @@
 
 cd ../DotNet/CIKataBackEnd/
 docker build -t backendimage .
-docker run -p 8080:80 --name backend backendimage
+# docker run -p 8080:80 --name backend backendimage
