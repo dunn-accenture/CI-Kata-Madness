@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using OpenQA.Selenium.Chrome;
 using Xunit;
 using Shouldly;
@@ -31,7 +32,11 @@ namespace CIKataFrontEnd.IntegrationTests
             var webDriver = new ChromeDriver(service, chromeOptions);
             
             webDriver.Navigate().GoToUrl("http://localhost:5000/");
-
+            
+            webDriver.FindElementByTagName("button").Click();
+            
+            Thread.Sleep(5000);
+            
             var div = webDriver.FindElementByTagName("div");
 
             try
