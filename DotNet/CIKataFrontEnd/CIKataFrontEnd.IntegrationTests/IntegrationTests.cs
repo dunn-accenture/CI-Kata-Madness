@@ -37,11 +37,11 @@ namespace CIKataFrontEnd.IntegrationTests
             
             Thread.Sleep(5000);
             
-            var div = webDriver.FindElementByTagName("div");
+            var paragraph = webDriver.FindElementByTagName("p");
 
             try
             {
-                div.Text.ShouldBe("This is a successful call!");
+                paragraph.Text.ShouldBe("This is a successful call!");
             }
             finally
             {
