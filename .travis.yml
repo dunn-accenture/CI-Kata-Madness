@@ -10,7 +10,6 @@ script:
   - ./frontEndBuildTest
   - cd ..
   - docker-compose up -d
-  - cd ../DotNet/CIKataFrontEnd/CIKataFrontEnd.IntegrationTests/
+  - cd ./DotNet/CIKataFrontEnd/CIKataFrontEnd.IntegrationTests/
   - dotnet test
-  - cd ..
   - docker-compose down
