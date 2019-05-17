@@ -1,10 +1,10 @@
 version: '3'
 services:
   frontend:
-    image: gingerfenix/ci-kata-madness:frontendimage
+    image: gingerfenix/ci-kata-madness:frontendlatest
     ports:
       - "5000:80"
   backend:
-    image: gingerfenix/ci-kata-madness:backendimage
+    image: gingerfenix/ci-kata-madness:backendlatest
     ports:
       - "8080:80"
