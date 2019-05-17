@@ -8,8 +8,6 @@ script:
   - cd ./scripts/
   - ./backEndBuildTest
   - ./frontEndBuildTest
-  - ./backEndContainer
-  - ./frontEndContainer
   - cd ..
   - docker-compose up -d
   - cd ../DotNet/CIKataFrontEnd/CIKataFrontEnd.IntegrationTests/
